@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-900 text-slate-200 font-sans min-h-screen overflow-hidden;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(0, 240, 255, 0.03) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.03) 0%, transparent 40%);
+  }
+
+  /* Custom sleek scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(11, 17, 30, 0.5);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.25);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 240, 255, 0.5);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(11, 17, 30, 0.78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(56, 189, 248, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  }
+
+  .glass-panel-glow {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 25px -5px rgba(0, 240, 255, 0.25);
+  }
+
+  .hud-badge {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-mono font-medium inline-flex items-center gap-1.5 transition-all;
+  }
+
+  .hud-badge-critical {
+    @apply bg-rose-500/15 text-rose-400 border border-rose-500/30;
+    box-shadow: 0 0 10px rgba(244, 63, 94, 0.2);
+  }
+
+  .hud-badge-elevated {
+    @apply bg-amber-500/15 text-amber-400 border border-amber-500/30;
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+  }
+
+  .hud-badge-normal {
+    @apply bg-emerald-500/15 text-emerald-400 border border-emerald-500/30;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+  }
+
+  .hud-btn {
+    @apply relative px-3 py-1.5 rounded-lg font-medium text-xs tracking-wider transition-all duration-200 
+           border border-cyber-border bg-cyber-800/80 hover:bg-cyber-750 hover:border-cyan-400/50 
+           text-slate-300 hover:text-white flex items-center gap-2;
+  }
+
+  .hud-btn-active {
+    @apply bg-cyan-950/60 border-cyan-400 text-cyan-300 shadow-glow-cyan;
+  }
+}
+
+/* Tooltip overlay styling for Deck.gl */
+.deck-tooltip {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1000;
+  background: rgba(7, 11, 19, 0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 240, 255, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  color: #e2e8f0 !important;
+}
+
+/* WebGL canvas container */
+#deckgl-overlay {
+  pointer-events: all;
+}
