@@ -93,7 +93,7 @@ Navi Mumbai           Pune   New Delhi   South Delhi      Bengaluru   Mysuru
 Clone the repository and start the integrated engine:
 
 ```bash
-git clone https://github.com/vedantpatil-git/enviro-pulse-webgl.git
+git clone https://github.com/vedant21006-byte/enviro-pulse-webgl.git
 cd enviro-pulse-webgl
 
 # Install backend dependencies
@@ -139,7 +139,7 @@ Open **`http://localhost:5173`** in your browser.
 ## 👨‍💻 Author
 **Vedant Patil**  
 * Artificial Intelligence & Machine Learning, RAIT (D.Y. Patil University)  
-* [LinkedIn](https://linkedin.com/in/vedant-patil-358a69298) • [GitHub](https://github.com/vedantpatil-git)
+* [LinkedIn](https://linkedin.com/in/vedant-patil-358a69298) • [GitHub](https://github.com/vedant21006-byte)
 
 ---
 
